@@ -48,9 +48,9 @@ Widget buttonSpacing(height){
 
 List<String> myGMPList = ['15', '25', '35', '45', '55', '65', '75', '85', '95', '100' ];
 
-List<String> myGPDRustList = ['10 GPD','11 GPD','12 GPD','14 GPD','16 GPD','17 GPD','22 GPD','24 GPD','30 GPD','40 GPD'];
+List<String> myGPDRustList = ['10','11','12','14','16','17','22','24','30','40'];
 
-List<String> myGPDCalciumList = ['10 GPD','11 GPD','16 GPD','17 GPD','22 GPD','24 GPD'];
+List<String> myGPDCalciumList = ['10','11','16','17','22','24'];
 
 List<String> myTankSizeRustList = ['15', '30', '100'];
 
