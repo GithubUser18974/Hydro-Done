@@ -18,7 +18,7 @@ class CalciumPreventionPage  extends StatelessWidget {
       body: ListView(
         physics: BouncingScrollPhysics(),
         children: [
-          Header(width: width, height: height),
+          Header(width: width, height: height*.65),
           SizedBox(
             height: height * .05,
           ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hydro_app/Controllers/CalculationController.dart';
-import 'package:hydro_app/Pages/SiphoningResultsPage.dart';
 import 'package:hydro_app/Widgets/DropDownWidget.dart';
 import 'package:hydro_app/Widgets/HeaderWidget.dart';
 import 'package:hydro_app/Widgets/MyButtonWidget.dart';
@@ -23,7 +22,7 @@ class _SiphoningPageState extends State<SiphoningPage> {
       body: ListView(
         physics: BouncingScrollPhysics(),
         children: [
-          Header(width: width, height: height),
+          Header(width: width, height: height*.65),
           SizedBox(
             height: height * .05,
           ),

@@ -58,27 +58,31 @@ class _DropDownWidgetState extends State<DropDownWidget> {
                   borderRadius: BorderRadius.circular(width * .1),
                 ),
                 // alignment: Alignment.center,
-                child: DropdownButton<String>(
-                  hint: Text('--'),
-                  value: dropdownValue,
-                  icon: Icon(
-                    Icons.arrow_drop_down,
-                    color: mainColor,
-                    size: height * .03,
-                  ),
-                  onChanged: (String newValue) {
-                    setState(() {
-                      dropdownValue = newValue;
-                      Provider.of<CalculationsProvider>(context,listen: false).setter(widget.text, dropdownValue);
-                    });
-                  },
-                  items: widget.choices
-                      .map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem<String>(
-                      value: value,
-                      child: Center(child: Text(value)),
-                    );
-                  }).toList(),
+                child: Row(
+                  children: [
+                    DropdownButton<String>(
+                      hint: Text('--'),
+                      value: dropdownValue,
+                      icon: Icon(
+                        Icons.arrow_drop_down,
+                        color: mainColor,
+                        size: height * .03,
+                      ),
+                      onChanged: (String newValue) {
+                        setState(() {
+                          dropdownValue = newValue;
+                          Provider.of<CalculationsProvider>(context,listen: false).setter(widget.text, dropdownValue);
+                        });
+                      },
+                      items: widget.choices
+                          .map<DropdownMenuItem<String>>((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Center(child: Text(value)),
+                        );
+                      }).toList(),
+                    ),
+                  ],
                 ),
               ),
             ),

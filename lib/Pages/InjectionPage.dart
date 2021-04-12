@@ -6,7 +6,6 @@ import 'package:hydro_app/Widgets/MyButtonWidget.dart';
 import 'package:provider/provider.dart';
 
 import '../Constants.dart';
-import 'InjectionResultsPage.dart';
 
 
 class InjectionPage extends StatefulWidget {
@@ -24,7 +23,7 @@ class _InjectionPageState extends State<InjectionPage> {
       body: ListView(
         physics: BouncingScrollPhysics(),
         children: [
-          Header(width: width, height: height),
+          Header(width: width, height: height*.65),
           SizedBox(
             height: height * .05,
           ),
