@@ -48,43 +48,41 @@ class _DropDownWidgetState extends State<DropDownWidget> {
         children: [
           Text(widget.text, style: textStyle3(height)),
           Flexible(
-            child: DropdownButtonHideUnderline(
-              child: Container(
-                height: height * .06,
-                width: width * .36,
-                padding: EdgeInsets.only(right: width * .03,left: width * .145, top: height * .005, bottom: height * .005),
-                decoration: BoxDecoration(
-                  border: Border.all(color: mainColor),
-                  borderRadius: BorderRadius.circular(width * .1),
-                ),
-                // alignment: Alignment.center,
-                child: Row(
-                  children: [
-                    DropdownButton<String>(
-                      hint: Text('--'),
-                      value: dropdownValue,
-                      icon: Icon(
-                        Icons.arrow_drop_down,
-                        color: mainColor,
-                        size: height * .03,
-                      ),
-                      onChanged: (String newValue) {
-                        setState(() {
-                          dropdownValue = newValue;
-                          Provider.of<CalculationsProvider>(context,listen: false).setter(widget.text, dropdownValue);
-                        });
-                      },
-                      items: widget.choices
-                          .map<DropdownMenuItem<String>>((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Center(child: Text(value)),
-                        );
-                      }).toList(),
+            child: Stack(
+              children:[ DropdownButtonHideUnderline(
+                child: Container(
+                  height: height * .06,
+                  width: width * .36,
+                  padding: EdgeInsets.symmetric(horizontal: width * .03, vertical: height * .005),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: mainColor),
+                    borderRadius: BorderRadius.circular(width * .1),
+                  ),
+                  alignment: Alignment.center,
+                  child: DropdownButton<String>(
+                    hint: Text('----'),
+                    value: dropdownValue,
+                    icon: Icon(
+                      Icons.arrow_drop_down,
+                      color: mainColor.withOpacity(0),
+                      size: height * .0,
                     ),
-                  ],
+                    onChanged: (String newValue) {
+                      setState(() {
+                        dropdownValue = newValue;
+                        Provider.of<CalculationsProvider>(context,listen: false).setter(widget.text, dropdownValue);
+                      });
+                    },
+                    items: widget.choices
+                        .map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                  ),
                 ),
-              ),
+              ),],
             ),
           ),
         ],

@@ -58,7 +58,7 @@ List<String> myTankSizeCalciumList = ['30', '100'];
 
 List<String> myIronLevelList = ['1', '2', '3', '4', '5', '6', '7', '8', '8+'];
 
-List<String> myPHLevels = ['less than 6' , '6 or above'];
+List<String> myPHLevels = ['< 6' , '> 6'];
 
 List<String> myWaterHardnessList = ['5', '10', '15', '20', '25', '30', '35', '40'];
 
