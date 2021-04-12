@@ -9,10 +9,12 @@ class DropDownWidget extends StatefulWidget {
   DropDownWidget({
     @required this.text,
     @required this.choices,
+    @required this.checker,
   });
 
   final String text;
   final List<String> choices;
+  final Function checker;
 
   @override
   _DropDownWidgetState createState() => _DropDownWidgetState();
@@ -72,6 +74,9 @@ class _DropDownWidgetState extends State<DropDownWidget> {
                         dropdownValue = newValue;
                         Provider.of<CalculationsProvider>(context,listen: false).setter(widget.text, dropdownValue);
                       });
+                      setState(
+                        widget.checker
+                      );
                     },
                     items: widget.choices
                         .map<DropdownMenuItem<String>>((String value) {
