@@ -10,6 +10,13 @@ class CalculationsProvider with ChangeNotifier{
   String cIronLevel = '' ;
   String cPHLevel = '' ;
 
+  bool filled = false;
+
+  void filledSetter(bool myBool){
+    filled = myBool;
+    notifyListeners();
+  }
+
   void setter(String keyWord,var dropdownValue){
     if(keyWord == 'System Type'){
       cSystemType = dropdownValue;
@@ -51,6 +58,7 @@ class CalculationsProvider with ChangeNotifier{
     this.cTankSize = '';
     this.cIronLevel = '';
     this.cPHLevel = '';
+    this.filled = false;
   }
 
 }

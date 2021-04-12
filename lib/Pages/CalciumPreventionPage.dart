@@ -3,10 +3,11 @@ import 'package:hydro_app/Controllers/CalculationController.dart';
 import 'package:hydro_app/Widgets/DropDownWidget.dart';
 import 'package:hydro_app/Widgets/HeaderWidget.dart';
 import 'package:hydro_app/Widgets/MyButtonWidget.dart';
+import 'package:hydro_app/Widgets/MyDisabledButtonWidget.dart';
+import 'package:hydro_app/Widgets/MyFlushBar.dart';
 import 'package:provider/provider.dart';
 
 import '../Constants.dart';
-import 'CalciumResultsPage.dart';
 
 class CalciumPreventionPage  extends StatelessWidget {
   @override
@@ -14,6 +15,7 @@ class CalciumPreventionPage  extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     var myProvider = Provider.of<CalculationsProvider>(context,listen: false);
+    myProvider.filledSetter(myProvider.cFlowRate != '' && myProvider.cTankSize != '' && myProvider.cGPD != '' && myProvider.cWaterHardness != '');
     return Scaffold(
       body: ListView(
         physics: BouncingScrollPhysics(),
@@ -35,14 +37,15 @@ class CalciumPreventionPage  extends StatelessWidget {
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: width*.075),
-                  child: MyButtonWidget(width: width,height: height,text: 'Calculate',func: (){
+                  child: Provider.of<CalculationsProvider>(context).filled ? MyButtonWidget(width: width,height: height,text: 'Calculate',func: (){
                     //  TODO
-                    if(myProvider.cFlowRate != '' && myProvider.cTankSize != '' && myProvider.cGPD != '' && myProvider.cWaterHardness != ''){
-                      Navigator.pushNamed(context,'/CalciumResultPage');
-                    }else{
-                      print('Check Fields');
-                    }
-                  },),
+                    Navigator.pushNamed(context,'/CalciumResultPage');
+                  },
+                  ) :
+                  MyDisabledButtonWidget(width: width,height: height,text: 'Calculate',func: (){
+                    MyFlushBar().show(context, 'Please Fill The Fields');
+                  },
+                  ),
                 ),
                 SizedBox(
                   height: height * .05,

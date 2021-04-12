@@ -38,8 +38,6 @@ class MyApp extends StatelessWidget {
         '/CalciumResultPage': (context) =>  CalciumResultPage(),
         '/SiphoningResultPage': (context) => SiphoningResultPage(),
         '/InjectionResultPage': (context) => InjectionResultPage(),
-
-
       },
     );
   }
