@@ -125,7 +125,7 @@ class CalculationsProvider with ChangeNotifier{
         break;
         case '16': {
           magic = 4.80;
-          gph = .33;
+          gph = .21;
 
         }
         break;
@@ -179,9 +179,10 @@ class CalculationsProvider with ChangeNotifier{
     if(this.cSystemType == 'Injection'){
       this.totalRunTime = double.parse(this.cTankSize)/gph;
       this.amt = tankList[tankGPMIndex]*myIron*magic;
+    }else{
+      this.amt = tankList[tankGPMIndex]*myIron;
     }
 
-    this.amt = tankList[tankGPMIndex]*myIron;
 
     notifyListeners();
 

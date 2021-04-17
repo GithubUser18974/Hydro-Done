@@ -27,7 +27,7 @@ class InjectionResultPage extends StatelessWidget {
               children: [
                 ResultWidget(width: width, height: height,name: 'System Type',result: 'Injection',),
                 ResultWidget(width: width, height: height,name: 'GPD of Pump',result: '${myProvider.cGPD} GPD',),
-                ResultWidget(width: width, height: height,name: 'Flow rate',result: '${myProvider.cFlowRate} GMP',),
+                ResultWidget(width: width, height: height,name: 'Flow rate',result: '${myProvider.cFlowRate} GPM',),
                 ResultWidget(width: width, height: height,name: 'Tank Size',result: '${myProvider.cTankSize}',),
                 ResultWidget(width: width, height: height,name: 'Iron Level',result: '${myProvider.cIronLevel}',),
                 ResultWidget(width: width, height: height,name: 'PH Level',result: '${myProvider.cPHLevel}',),

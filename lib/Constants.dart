@@ -56,7 +56,7 @@ List<String> myTankSizeRustList = ['15', '30', '100'];
 
 List<String> myTankSizeCalciumList = ['30', '100'];
 
-List<String> myIronLevelList = ['1', '2', '3', '4', '5', '6', '7', '8', '8+'];
+List<String> myIronLevelList = ['1', '2', '3', '4', '5', '6', '7', '8'];
 
 List<String> myPHLevels = ['< 6' , '> 6'];
 
