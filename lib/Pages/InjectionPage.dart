@@ -40,7 +40,7 @@ class _InjectionPageState extends State<InjectionPage> {
                         myProvider.cPHLevel != '' &&
                         myProvider.cGPD != '');
                   },
-                  text: 'Flow Rate in GMP',
+                  text: 'Flow Rate in GPM',
                   choices: myGMPList,
                 ),
                 DropDownWidget(

@@ -24,7 +24,7 @@ class CalculationsProvider with ChangeNotifier{
     }else if(keyWord == 'GPD of Pump'){
       cGPD = dropdownValue;
       print('done');
-    }else if(keyWord == 'Flow Rate in GMP'){
+    }else if(keyWord == 'Flow Rate in GPM'){
       cFlowRate = dropdownValue;
       print('done');
     }else if(keyWord == 'Tank Size'){

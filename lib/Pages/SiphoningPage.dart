@@ -39,7 +39,7 @@ class _SiphoningPageState extends State<SiphoningPage> {
                         myProvider.cIronLevel != '' &&
                         myProvider.cPHLevel != '');
                   },
-                  text: 'Flow Rate in GMP',
+                  text: 'Flow Rate in GPM',
                   choices: myGMPList,
                 ),
                 DropDownWidget(

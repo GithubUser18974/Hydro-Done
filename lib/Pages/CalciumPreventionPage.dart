@@ -40,7 +40,7 @@ class _CalciumPreventionPageState extends State<CalciumPreventionPage> {
                         myProvider.cGPD != '' &&
                         myProvider.cWaterHardness != '');
                   },
-                  text: 'Flow Rate in GMP',
+                  text: 'Flow Rate in GPM',
                   choices: myGMPList,
                 ),
                 DropDownWidget(
