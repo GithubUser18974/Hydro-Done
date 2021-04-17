@@ -81,6 +81,8 @@ class _SiphoningPageState extends State<SiphoningPage> {
                           text: 'Calculate',
                           func: () {
                             //  TODO
+                            Provider.of<CalculationsProvider>(context,listen: false).calculate();
+
                             Navigator.pushNamed(
                                 context, '/SiphoningResultPage');
                           },

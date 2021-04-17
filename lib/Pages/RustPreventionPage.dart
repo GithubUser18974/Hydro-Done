@@ -37,6 +37,7 @@ class RustPreventionPage extends StatelessWidget {
               children: [
                 MyButtonWidget(width: width, height: height,text: "Injection",func: (){
                   Provider.of<CalculationsProvider>(context,listen: false).clean();
+                  Provider.of<CalculationsProvider>(context,listen: false).setter('System Type', 'Injection');
                   Navigator.pushNamed(context, '/InjectionPage');
                 },),
                 buttonSpacing(height),

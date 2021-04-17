@@ -32,7 +32,7 @@ class SiphoningResultPage extends StatelessWidget {
                 ResultWidget(width: width, height: height,name: 'Tank Size',result: '${myProvider.cTankSize}',),
                 ResultWidget(width: width, height: height,name: 'PH Level',result: '${myProvider.cPHLevel}',),
                 //TODO Calculations
-                ResultWidget(width: width, height: height,name: 'Amt. of Formula',result: '4.80 Units',),
+                ResultWidget(width: width, height: height,name: 'Amt. of Formula',result: '${myProvider.amt.toStringAsFixed(2)} Units',),
               ],
             ),
           ),

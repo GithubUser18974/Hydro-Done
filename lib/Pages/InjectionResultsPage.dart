@@ -32,8 +32,8 @@ class InjectionResultPage extends StatelessWidget {
                 ResultWidget(width: width, height: height,name: 'Iron Level',result: '${myProvider.cIronLevel}',),
                 ResultWidget(width: width, height: height,name: 'PH Level',result: '${myProvider.cPHLevel}',),
                 //TODO Calculations
-                ResultWidget(width: width, height: height,name: 'Amt. of Formula',result: '4.80 Units',),
-                ResultWidget(width: width, height: height,name: 'Runtime',result: '65 Hours',),
+                ResultWidget(width: width, height: height,name: 'Amt. of Formula',result: '${myProvider.amt.toStringAsFixed(2)} Units',),
+                ResultWidget(width: width, height: height,name: 'Runtime',result: '${myProvider.totalRunTime.toStringAsFixed(1)} Hours',),
               ],
             ),
           ),

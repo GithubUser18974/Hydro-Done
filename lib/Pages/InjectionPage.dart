@@ -95,6 +95,7 @@ class _InjectionPageState extends State<InjectionPage> {
                           text: 'Calculate',
                           func: () {
                             //  TODO
+                            Provider.of<CalculationsProvider>(context,listen: false).calculate();
                             Navigator.pushNamed(
                                 context, '/InjectionResultPage');
                           },
