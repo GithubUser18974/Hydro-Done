@@ -41,7 +41,7 @@ class _CalciumPreventionPageState extends State<CalciumPreventionPage> {
                         myProvider.cWaterHardness != '');
                   },
                   text: 'Flow Rate in GPM',
-                  choices: myGMPList,
+                  choices: myGPMCalciumList,
                 ),
                 DropDownWidget(
                     checker: () {
@@ -82,6 +82,7 @@ class _CalciumPreventionPageState extends State<CalciumPreventionPage> {
                           text: 'Calculate',
                           func: () {
                             //  TODO
+                            myProvider.calciumCalculations();
                             Navigator.pushNamed(context, '/CalciumResultPage');
                           },
                         )

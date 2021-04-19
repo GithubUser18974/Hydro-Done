@@ -41,7 +41,7 @@ class _InjectionPageState extends State<InjectionPage> {
                         myProvider.cGPD != '');
                   },
                   text: 'Flow Rate in GPM',
-                  choices: myGMPList,
+                  choices: myGPMList,
                 ),
                 DropDownWidget(
                     checker: () {
@@ -95,7 +95,7 @@ class _InjectionPageState extends State<InjectionPage> {
                           text: 'Calculate',
                           func: () {
                             //  TODO
-                            Provider.of<CalculationsProvider>(context,listen: false).calculate();
+                            Provider.of<CalculationsProvider>(context,listen: false).rustCalculations();
                             Navigator.pushNamed(
                                 context, '/InjectionResultPage');
                           },

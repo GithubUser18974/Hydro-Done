@@ -21,15 +21,13 @@ class Header extends StatelessWidget {
       child: Container(
         width: width,
         height: height * .5,
-        padding: EdgeInsets.symmetric(horizontal: width*.35),
+        padding: EdgeInsets.symmetric(horizontal: width*.1),
         decoration: BoxDecoration(
           color: mainColor,
         ),
-        child: SvgPicture.asset(
-          'images/Component 1.svg',
-          semanticsLabel: 'Acme Logo',
-
-        ),
+        child: Image(
+          image: AssetImage('images/AHS_Logo_White.png'),
+        )
       ),
     );
   }

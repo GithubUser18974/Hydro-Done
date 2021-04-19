@@ -46,7 +46,9 @@ Widget buttonSpacing(height){
   return SizedBox(height: height*.03,);
 }
 
-List<String> myGMPList = ['15', '25', '35', '45', '55', '65', '75', '85', '95', '100' ];
+List<String> myGPMList = ['15', '25', '35', '45', '55', '65', '75', '85', '95', '100'];
+
+List<String> myGPMCalciumList = ['10','20','25','30','40','50','60','70','80','90','100'];
 
 List<String> myGPDRustList = ['10','11','12','14','16','17','22','24','30','40'];
 

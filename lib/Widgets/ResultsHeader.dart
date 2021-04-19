@@ -29,13 +29,12 @@ class ResultsHeader extends StatelessWidget {
           children: [
             SizedBox(height: height*.1,),
             Expanded(
-              flex: 4,
-              child: SvgPicture.asset(
-                'images/Component 1.svg',
-                semanticsLabel: 'Acme Logo',
-              ),
+              flex: 7,
+              child: Image(
+                image: AssetImage('images/AHS_Logo_White.png'),
+              )
             ),
-            SizedBox(height: height*.05,),
+            SizedBox(height: height*.02,),
             Expanded(
               flex: 4,
               child: Text(

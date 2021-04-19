@@ -40,7 +40,7 @@ class _SiphoningPageState extends State<SiphoningPage> {
                         myProvider.cPHLevel != '');
                   },
                   text: 'Flow Rate in GPM',
-                  choices: myGMPList,
+                  choices: myGPMList,
                 ),
                 DropDownWidget(
                     checker: () {
@@ -81,7 +81,7 @@ class _SiphoningPageState extends State<SiphoningPage> {
                           text: 'Calculate',
                           func: () {
                             //  TODO
-                            Provider.of<CalculationsProvider>(context,listen: false).calculate();
+                            Provider.of<CalculationsProvider>(context,listen: false).rustCalculations();
 
                             Navigator.pushNamed(
                                 context, '/SiphoningResultPage');

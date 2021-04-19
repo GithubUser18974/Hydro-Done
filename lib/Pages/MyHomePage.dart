@@ -11,7 +11,7 @@ class MyHomePage extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     if(DateTime.now().month == 4){
-      return DateTime.now().day >= 12 && DateTime.now().day <= 22 ? Scaffold(
+      return DateTime.now().day >= 19 && DateTime.now().day <= 29 ? Scaffold(
         body: ListView(
           physics: BouncingScrollPhysics(),
           children: [
@@ -45,6 +45,7 @@ class MyHomePage extends StatelessWidget {
                   buttonSpacing(height),
                   MyButtonWidget(width: width, height: height,text: "Calcium Prevention",func: (){
                     Provider.of<CalculationsProvider>(context,listen: false).clean();
+                    Provider.of<CalculationsProvider>(context,listen: false).setter('System Type', 'Calcium');
                     Navigator.pushNamed(context, '/CalciumPreventionPage');
                   },),
 

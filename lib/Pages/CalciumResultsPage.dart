@@ -30,8 +30,8 @@ class CalciumResultPage extends StatelessWidget {
                 ResultWidget(width: width, height: height,name: 'Flow rate'         ,result: '${myProvider.cFlowRate} GMP',),
                 ResultWidget(width: width, height: height,name: 'Tank Size'         ,result: '${myProvider.cTankSize}',),
                 //TODO Calculations
-                ResultWidget(width: width, height: height,name: 'Runtime'           ,result: '435 Hours',),
-                ResultWidget(width: width, height: height,name: 'Amt. of Formula'   ,result: '4.80 Units',),
+                ResultWidget(width: width, height: height,name: 'Runtime'           ,result: '${myProvider.totalRunTime.toStringAsFixed(1)} Hours',),
+                ResultWidget(width: width, height: height,name: 'Amt. of Formula'   ,result: '${myProvider.amt.toStringAsFixed(2)} Units',),
               ],
             ),
           ),
