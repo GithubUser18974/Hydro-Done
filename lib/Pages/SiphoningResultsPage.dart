@@ -44,7 +44,7 @@ class SiphoningResultPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "With a pH of Under 6, you should be using\nRid O' Rust Stain Extreme Water Concentrate",
+                  myProvider.cPHLevel == '< 6' ? "With a pH of Under 6, you should be using\nRid O' Rust Stain Extreme Water Concentrate" : "With a pH of Over 6, you should be using Rid O' Rust Concentrated Rust Preventer 2X",
                   style: textStyle4(height*.8),
                 ),
                 SizedBox(

@@ -14,13 +14,18 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   flutter_custom_clippers: ^1.1.2
-  flutter_svg: ^0.21.0+1
   provider: ^5.0.0
   flushbar: ^1.10.4
 
 dev_dependencies:
+  flutter_launcher_icons: "^0.8.0"
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "images/AHS_Logo_White.png"
 
 flutter:
   uses-material-design: true

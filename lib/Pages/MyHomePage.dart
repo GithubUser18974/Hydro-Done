@@ -10,8 +10,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-    if(DateTime.now().month == 4){
-      return DateTime.now().day >= 19 && DateTime.now().day <= 29 ? Scaffold(
+      return  Scaffold(
         body: ListView(
           physics: BouncingScrollPhysics(),
           children: [
@@ -54,9 +53,6 @@ class MyHomePage extends StatelessWidget {
             )
           ],
         ),
-      ) : Container();
-    }else{
-      return Container();
+      );
     }
   }
-}
